@@ -1,0 +1,58 @@
+.header 
+  display: block
+  background-color: $white
+  &__part 
+  	+flex_between_center
+  	padding: 14px 0 20px
+  &__data 
+  	display: flex 
+  	align-items: center 
+  &__icon 
+  	width: 16px
+  	height: 18px 
+  	margin-right: 10px
+  	position: relative
+  	&:after 
+  		content: ''
+  		width: 5px
+  		height: 5px
+  		border-radius: 50% 
+  		position: absolute
+  		top: 0 
+  		right: 0
+  		background-color: $pink
+  	svg 
+  		fill: $gray
+  &__burger 
+    display: none 
+
+  +bp($bp-large2)
+    &__burger 
+      display: block 
+      width: 30px
+      margin-left: 20px 
+      cursor: pointer
+      transition: $transition
+      &:hover 
+        transform: scale(0.8)
+        .header__burger-line
+          background-color: $purple
+    &__burger-line
+      width: 100% 
+      height: 3px
+      border-radius: 9px
+      background-color: $purple2
+      margin-bottom: 4px
+      transition: $transition
+      &:last-child
+        margin-bottom: 0
+
+    &__data 
+      margin-left: auto
+
+  +bp($bp-small)
+    &__part 
+      padding: 10px 0
+    &__logo 
+      width: 90px
+  

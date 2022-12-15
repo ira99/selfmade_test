@@ -1,0 +1,42 @@
+mixin nav()
+  .nav.js-nav
+    .nav__close.js-close-nav
+      +svg('close') 
+    nav.nav__nav
+      ul.nav__list
+        li.nav__item
+          a.nav__link.is-active(href="#")
+            +svg('control').nav__icon
+            span Управление
+        li.nav__item
+          a.nav__link(href="#")
+            +svg('portfolio').nav__icon.nav__icon--stroke
+            span Портфолио
+        li.nav__item
+          a.nav__link(href="#")
+            +svg('awards').nav__icon.nav__icon--stroke 
+            span Награды
+        li.nav__item
+          a.nav__link(href="#")
+            +svg('favorites').nav__icon.nav__icon--stroke 
+            span Избранное
+        li.nav__item
+          a.nav__link(href="#")
+            +svg('account').nav__icon
+            span Аккаунт
+        li.nav__item
+          a.nav__link(href="#")
+            +svg('level').nav__icon 
+            span Уровень
+        li.nav__item
+          a.nav__link(href="#")
+            +svg('premium').nav__icon.nav__icon--stroke.nav__icon--large
+            span Премиум
+        li.nav__item
+          a.nav__link(href="#")
+            +svg('support').nav__icon
+            span Поддержка
+        li.nav__item
+          a.nav__link.nav__link--enter(href="#")
+            +svg('enter').nav__icon
+            span Выйти

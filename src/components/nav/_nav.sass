@@ -1,0 +1,116 @@
+.nav 
+	border-radius: $borderBase
+	background-color: $gray2
+	padding: 16px 0
+	overflow: hidden
+	&__item 
+		padding: 0 17px
+		margin-bottom: 2px
+	&__link 
+		display: flex 
+		align-items: center
+		padding: 18px 15px 18px 40px
+		border-radius: $borderBase
+		font-size: rem(16px)
+		font-weight: 500
+		color: $baseTxt
+		transition: $transition
+		&.is-active 
+			background-color: $white
+
+		&--enter
+			padding-top: 19px 
+			padding-bottom: 0
+			margin-top: 15px 
+			position: relative 
+			&:before 
+				+bor('t')
+		&:hover 
+			color: $purple
+			.nav__icon 
+				fill: $purple 
+				&--stroke 
+					fill: none
+					stroke: $purple
+		&.is-active
+			color: $pink 
+			background-color: $white
+			.nav__icon 
+				fill: $pink 
+				&--stroke 
+					fill: none
+					stroke: $pink
+
+	&__icon 
+		width: 21px
+		height: 21px
+		margin-right: 10px
+		fill: $baseTxt
+		transition: $transition
+
+		&--stroke 
+			fill: none 
+			stroke: $baseTxt 
+			stroke-width: 2px
+
+		&--large
+			width: 24px
+			height: 24px
+
+	&__close
+		display: none
+
+	+bp($bp-large2)
+		position: fixed 
+		width: 100%
+		height: 100%
+		top: 0 
+		left: 0
+		border-radius: 0
+		padding: 50px 30px
+		transform: translate3d(110%,0,0)
+		transition: 0.6s ease-in-out 
+		&.is-active 
+			transform: translate3d(0,0,0)
+		&__link 
+			display: inline-flex
+			width: 200px 
+			padding-left: 35px
+			padding-right: 35px
+			margin-left: auto 
+			margin-right: auto
+			&--enter 
+				padding-top: 27px
+				&:before 
+					width: 3000px
+		&__item 
+			display: flex 
+			justify-content: center 
+		&__close
+			display: block 
+			width: 30px
+			height: 30px
+			position: absolute 
+			top: 12px 
+			right: 15px
+			
+			svg 
+				fill: $pink 
+				transition: $transition
+
+			&:hover 
+				cursor: pointer
+				svg 
+					fill: $purple 
+					transform: scale(0.8)
+
+	+bp($bp-small)
+		&__item 
+			margin-bottom: 5px
+		&__link 
+			padding: 12px 32px
+			border-radius: 10px
+			&--enter 
+				padding-top: 24px
+
+

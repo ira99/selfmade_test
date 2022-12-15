@@ -1,0 +1,36 @@
+.user 
+	display: inline-flex 
+	align-items: center
+	color: inherit
+	&--reverse
+		flex-direction: row-reverse
+	&__photo 
+		width: 46px
+		height: 46px
+		border-radius: 50%
+		overflow: hidden
+		background-color: $baseTxt
+		+foil
+		margin-left: 10px
+
+		&--large 
+			width: 71px
+			height: 71px 
+			margin: 0 22px 0 0 
+
+	&__name
+		&--large 
+			font-size: rem(20px)
+			font-weight: 700
+
+	+bp($bp-small)
+		&__name
+			display: none 
+			&--large
+				display: block 
+				font-size: rem(14px)
+		&__photo 
+			&--large 
+				width: 46px
+				height: 46px 
+				margin: 0 7px 0 0 

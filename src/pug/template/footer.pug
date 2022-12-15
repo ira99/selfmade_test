@@ -1,0 +1,23 @@
+include ../../components/social/social
+
+mixin footer(props)
+  footer.footer
+    .wrapper
+      .footer__top
+        .footer__line
+          .footer__logo 
+            +img('logo-white.svg')
+          +social()
+        ul.footer__line.footer__list 
+          li.footer__item: a.footer__link(href="#") Как работает сервис?
+          li.footer__item: a.footer__link(href="#") Советы от SELFMADE
+          li.footer__item: a.footer__link(href="#") Пользовательское соглашение
+          li.footer__item: a.footer__link(href="#") Почему SELFMADE
+          li.footer__item: a.footer__link(href="#") Помощь и поддержка
+    .footer__bottom
+      .wrapper 
+        .footer__line 
+          span © SELFMADE.TEAM 2022
+          span ИНН 431207720494 / ОГРНИП 320508100324371
+          a.link.link--gray(href="#" target="_blank") Политика конфиденциальности
+

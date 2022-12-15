@@ -1,0 +1,50 @@
+table 
+	width: 100% 
+
+	tr 
+		td
+			background-color: $gray5
+
+		&:nth-child(2n)
+			td
+				background-color: $gray6
+		&:first-child 
+			th
+				background-color: $purple
+				color: $white
+				&:first-child
+					border-radius: 15px 0px 0 0
+				&:last-child
+					border-radius: 0px 15px 0 0
+				h2 
+					color: $purple3 
+					span 
+						text-decoration: underline
+
+		&:last-child 
+			td:first-child
+				border-radius: 0px 0px 0 15px
+			td:last-child
+				border-radius: 0px 0px 15px 0px
+
+
+	td, th 
+		text-align: left 
+		padding: 15px 21px 15px 
+		font-size: rem(14px)
+		border-right: 1px solid $white 
+
+		&:last-child
+			border-right: none
+
+		&:not(:first-child)
+			text-align: center
+
+	th 
+		font-weight: 700
+
+.table 
+	+bp($bp-small)
+		overflow-x: auto 
+		table 
+			width: 620px

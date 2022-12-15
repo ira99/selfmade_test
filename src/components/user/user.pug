@@ -1,0 +1,6 @@
+mixin user(data)
+  a.user(class={'user--reverse': data.isReverse} href="#")
+    h5.user__name(class={
+      'user__name--large': data.isLargeUser})= data.name
+    .user__photo(class={
+      'user__photo--large': data.isLargePhoto} style=`background-image: url(./images/${data.photo}.png)`)

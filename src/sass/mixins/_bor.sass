@@ -1,0 +1,12 @@
+@mixin bor($pos)
+	content: ''
+	width: 200% 
+	height: 1px 
+	+center('h')
+	background-color: $bor
+
+	@if $pos == 't'
+		top: 0
+
+	@if $pos == 'b'
+		bottom: 0

@@ -1,0 +1,20 @@
+include ../../components/user/user
+
+mixin header(props)
+  header.header
+    .wrapper
+      .header__part 
+        a.header__logo(href="#")
+          +img('logo.svg')
+        .header__data
+          .header__icon
+            +svg('call')
+          
+          +user({
+            name: 'Аракелян Д.',
+            photo: 'user-mini'
+          })
+        .header__burger.js-burger
+          .header__burger-line 
+          .header__burger-line
+          .header__burger-line

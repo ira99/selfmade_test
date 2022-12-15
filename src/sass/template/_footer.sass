@@ -1,0 +1,39 @@
+.footer 
+	background-color: $purple 
+	color: $white
+
+	&__bottom 
+		background-color: $purple4
+		padding: 29px 0 30px
+
+	&__line 
+		+flex_between_center
+
+	&__list 
+		margin-top: 44px
+
+	&__top 
+		padding: 44px 0 22px
+
+	&__item 
+		margin-bottom: 22px
+
+	&__link 
+		color: $white 
+		&:hover 
+			color: $pink
+
+	+bp($bp-medium)
+		text-align: center
+		font-size: rem(14px)
+		&__line
+			flex-direction: column 
+			justify-content: center
+			span 
+				margin-bottom: 15px
+		&__logo 
+			margin-bottom: 30px
+		&__list 
+			margin-top: 30px
+		&__item
+			margin-bottom: 12px
